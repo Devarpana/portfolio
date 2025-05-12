@@ -38,7 +38,7 @@
 
 html{
   scroll-behavior: smooth;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 body {
@@ -77,7 +77,7 @@ nav {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -93,7 +93,7 @@ nav {
 
 .nav-links a {
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1.5rem;
   color: var(--text-color);
   transition: color 0.3s;
   position: relative
@@ -114,7 +114,7 @@ nav {
 
 .hamburger {
   display: none;
-  font-size: 24px;
+  font-size: 30px;
   cursor: pointer;
 }
 
@@ -139,7 +139,7 @@ nav {
   padding-left: 50px;
 }
 .heading{
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-family: 'Orbitron', sans-serif;
 }
 .purple {
@@ -157,7 +157,7 @@ nav {
   border-radius: 5px;
   align-items: center;
   list-style: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: 'Orbitron', sans-serif;
   transition: background 0.3s ease;
 }
@@ -173,7 +173,7 @@ nav {
 
 .rightSection img {
   width: 100%;
-  max-width: 320px;
+  max-width: 350px;
 }
 
 .image-container {
@@ -189,7 +189,7 @@ nav {
   color: white;
   padding: 10px 15px;
   border-radius: 15px;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   display: none;
   animation: bounce 1s infinite;
   white-space: nowrap;
@@ -248,7 +248,7 @@ main {
   display: block;
   margin: 0 auto;
   width: 24px;
-  height: 100px;
+  height: 150px;
 }
 
 
@@ -515,14 +515,14 @@ animation: mouse-wheel 0.6s linear infinite;
 
 .info-box.special .text h3 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   color: #ff0095;
   margin-bottom: 5px;
 }
 
 .info-box.special .text p {
   font-family: 'Russo One', sans-serif;
-  font-size: 14px;
+  font-size: 1rem;
   margin: 0;
   line-height: 1.5;
 }
@@ -535,7 +535,7 @@ animation: mouse-wheel 0.6s linear infinite;
 .category-title {
   font-family: 'Orbitron', sans-serif;
   color: #ff0095;
-  font-size: 1rem;
+  font-size: 20px;
   margin-bottom: 10px;
   text-align: left;
 }
@@ -553,7 +553,7 @@ border-radius: 30px;
 color: var(--text-color);
 font-family: 'Russo One', sans-serif;
 padding: 12px 20px;
-font-size: 0.8rem;
+font-size: 1rem;
 display: flex;
 align-items: center;
 gap: 10px;
@@ -613,7 +613,7 @@ font-size: 1rem;
     transition: left 0.3s ease;
   }
   .logo {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
   }
   .nav-links.active {
@@ -623,7 +623,7 @@ font-size: 1rem;
     padding-left: 0;
     } 
   .heading{
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
   .firstSection > div {
     text-align: center;
@@ -634,7 +634,7 @@ font-size: 1rem;
     max-width: 300px;
   }
   .message-bubble {
-    font-size: 0.8rem;
+    font-size: 1rem;
     top: 80%;
     left: 25%;
     transform: translateX(-50%);
@@ -652,7 +652,7 @@ font-size: 1rem;
     left: 50%;
  }
  .section-title{
-  font-size: 0.5rem;
+  font-size: 1rem;
  }
  .typewriter-heading {
   font-size: 1.7rem;
@@ -674,7 +674,7 @@ margin-top: 50px;
 .services-list div{
   background-color:  var(--color2);
   padding: 40px;
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: 300;
   border-radius: 10px;
   border: 1px solid #ff0095;
@@ -686,19 +686,19 @@ margin-top: 50px;
 }
 .services-list div h3{
   font-family: 'Orbitron', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   color: #ff0095;
   margin-bottom: 5px;
 }
 .services-list div p{
   font-family: 'Russo One', sans-serif;
-  font-size: 13px;
+  font-size: 1rem;
   margin: 0;
 }
 .services-list div a{
   text-decoration: none;
   color: var(--text-color);
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 20px;
   display: inline-block;
 }
@@ -883,7 +883,7 @@ margin-top: 50px;
 .contact-left p{
   margin-top: 30px;
   font-family: 'Russo One', sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .contact-left p i{
   color:#ff0095;
@@ -916,7 +916,7 @@ form input, form textarea{
   color: var(--text-color);
   padding:15px ;
   margin: 15px 0;
-  font-size: 18px;
+  font-size: 20px;
   font-family:  'Russo One', sans-serif;
   border-radius: 6px;
 }
@@ -949,7 +949,7 @@ iframe{
   background:  var(--bg-2);
   font-weight:300 ;
   font-family:  'Russo One', sans-serif;
-  font-size: 11px;
+  font-size: 1rem;
 }
 .copyright i{
   color: red;
@@ -969,7 +969,7 @@ iframe{
 
 .toggle-label {
   cursor: pointer;
-  font-size: 20px;
+  font-size: 25px;
   color: var(--text-color);
 }
 
@@ -993,7 +993,7 @@ iframe{
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.6);; /* Transparent black */
   color: white;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
   display: flex;
   align-items: center;
