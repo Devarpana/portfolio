@@ -1,9 +1,12 @@
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active'); // Your mobile menu visibility logic
+    document.body.classList.toggle('nav-open'); // This disables scroll
+  });
+
 
 var typed = new Typed('#element', {
   strings: ['Web Developer', 'Web Designer', 'Graphic Designer', 'Data Engineer'],

@@ -40,6 +40,9 @@ html{
   scroll-behavior: smooth;
   font-weight: 500;
 }
+body.nav-open {
+  overflow: hidden;
+}
 
 body {
   background: var(--gradient), var(--bg-image);
@@ -93,7 +96,7 @@ nav {
 
 .nav-links a {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--text-color);
   transition: color 0.3s;
   position: relative
@@ -618,6 +621,10 @@ font-size: 1rem;
     border-top: 1px solid var(--text-color);
     transition: left 0.3s ease;
   }
+  
+  .nav-links a {
+    font-size: 1.2rem;
+  }
   .logo {
     font-size: 1.5rem;
     font-weight: bold;
@@ -630,6 +637,13 @@ font-size: 1rem;
     } 
   .heading{
     font-size: 2rem;
+  }
+  .section-heading {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    border-bottom: 2px solid var(--text-color);
+    display: inline-block;
+    padding-bottom: 10px;
   }
   .firstSection > div {
     text-align: center;
