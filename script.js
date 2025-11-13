@@ -4,7 +4,7 @@
 
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active'); // Your mobile menu visibility logic
-    document.body.classList.toggle('nav-open'); // This disables scroll
+    // document.body.classList.toggle('nav-open'); // This disables scroll
   });
 
 
