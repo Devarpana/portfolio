@@ -20,10 +20,10 @@
   --shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.7);
   --glow: 0 0 0 1px rgba(255, 0, 149, 0.35), 0 18px 45px -12px rgba(255, 0, 149, 0.45);
   --nav-bg: rgba(7, 3, 15, 0.65);
-  --orb-opacity: 0.3;
-  --code-opacity: 0.7;
-  --code-filter: grayscale(0.45) brightness(0.8);
-  --code-veil: linear-gradient(90deg, rgba(7, 3, 15, 0.8) 0%, rgba(7, 3, 15, 0.5) 55%, rgba(7, 3, 15, 0.72) 100%), linear-gradient(180deg, rgba(7, 3, 15, 0.1), rgba(7, 3, 15, 0.5));
+  --orb-opacity: 0.26;
+  --code-opacity: 0.58;
+  --code-filter: grayscale(0.5) brightness(0.68);
+  --code-veil: linear-gradient(90deg, rgba(7, 3, 15, 0.82) 0%, rgba(7, 3, 15, 0.55) 55%, rgba(7, 3, 15, 0.75) 100%), linear-gradient(180deg, rgba(7, 3, 15, 0.15), rgba(7, 3, 15, 0.55));
 
   --radius: 18px;
   --radius-sm: 12px;
@@ -46,7 +46,7 @@
   --glow: 0 0 0 1px rgba(255, 0, 149, 0.3), 0 18px 40px -14px rgba(255, 0, 149, 0.35);
   --nav-bg: rgba(253, 246, 251, 0.75);
   --orb-opacity: 0.25;
-  --code-opacity: 0.34;
+  --code-opacity: 0.28;
   --code-filter: invert(1) hue-rotate(180deg) grayscale(0.45);
   --code-veil: linear-gradient(90deg, rgba(253, 246, 251, 0.86) 0%, rgba(253, 246, 251, 0.6) 55%, rgba(253, 246, 251, 0.84) 100%);
 }
