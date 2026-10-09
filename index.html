@@ -1,395 +1,557 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Teko:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
-  <link rel="icon" type="image/png" href="images/Favicon-img.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devarpana Tribedi | Web Developer &amp; Data Science Student</title>
 
-
-  <!-- Meta Tags for SEO -->
-  <meta name="description" content="Personal portfolio of Devarpana Tribedi, Web Developer, Programmer, and Tech Enthusiast.">
-  <meta name="keywords" content="portfolio, web developer, projects, HTML, CSS, JavaScript, Devarpana Tribedi">
+  <!-- SEO -->
+  <meta name="description" content="Portfolio of Devarpana Tribedi: web developer, computer vision intern at TIH-IITG and B.Sc. (Hons.) Data Science &amp; AI student at IIT Guwahati.">
+  <meta name="keywords" content="Devarpana Tribedi, portfolio, web developer, computer vision, YOLOv8, MERN, React, Django, data science, IIT Guwahati, TIH-IITG">
   <meta name="author" content="Devarpana Tribedi">
+  <link rel="canonical" href="https://devarpana.github.io/portfolio/">
+  <meta name="theme-color" content="#07030f">
 
-  <!-- Meta Tags for Responsive Design -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Social Media Preview (Optional) -->
-  <meta property="og:title" content="Devarpana | Portfolio">
-  <meta property="og:description" content="Explore the projects and skills of [Your Name], a passionate web developer.">
-  <meta property="og:image" content="images/preview.jpg"> <!-- Add this image -->
+  <!-- Social preview -->
   <meta property="og:type" content="website">
-   <title>Devarpana's Portfolio</title>
+  <meta property="og:url" content="https://devarpana.github.io/portfolio/">
+  <meta property="og:title" content="Devarpana Tribedi | Portfolio">
+  <meta property="og:description" content="Explore the projects and skills of Devarpana Tribedi, a passionate web developer and data science student.">
+  <meta property="og:image" content="https://devarpana.github.io/portfolio/images/preview.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Devarpana Tribedi",
+    "url": "https://devarpana.github.io/portfolio/",
+    "jobTitle": "Web Developer",
+    "alumniOf": "IIT Guwahati",
+    "sameAs": [
+      "https://www.linkedin.com/in/devarpana-tribedi",
+      "https://github.com/Devarpana"
+    ]
+  }
+  </script>
+
+  <!-- Apply saved theme before paint so there is no flash -->
+  <script>
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var saved = localStorage.getItem('theme');
+        var theme = saved === 'light' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="icon" type="image/png" href="images/Favicon-img.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <header id="home">
-    <nav>
-      <div class="hamburger purple">&#9776;</div> 
-      <div class="logo"><span class="purple">@</span>Devarpna<span class="purple">.__</span></div>
-      <ul class="nav-links">
-        <li><a href="#home">#Home</a></li>
-        <li><a href="#about">#About</a></li>
-        <li><a href="#services">#Services</a></li>
-        <li><a href="#projects">#Projects</a></li>
-        <li><a href="#contact">#Contact me</a></li>
-      </ul> 
-         
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="bg-decor" aria-hidden="true">
+    <span class="bg-code"></span>
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+
+  <!-- ================= NAV ================= -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main">
+      <a href="#home" class="logo"><span class="accent">@</span>Devarpana<span class="accent">.__</span></a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light theme" title="Toggle theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="icon-btn hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <div class="floating-code">
-      <div>Welcome to my portfolio.</div>
-      <div>Welcome to my portfolio.</div>
-      <div>Welcome to my portfolio.</div>
-      <div>Welcome to my portfolio.</div>
-      <div>Welcome to my portfolio.</div>
-      <div>Welcome to my portfolio.</div>
-      <div>Welcome to my portfolio.</div>
-      <div>Welcome to my portfolio.</div>
-      <div>Welcome to my portfolio.</div>
-      <div>Welcome to my portfolio.</div>
-      <div>Welcome to my portfolio.</div>
-      <div>Welcome to my portfolio.</div>
-      <div>Welcome to my portfolio.</div>
-      <div>Welcome to my portfolio.</div>
-    </div>
-
-    <section class="firstSection">
-      <div class="leftSection heading">
-        Hi, My name is <span class="purple">Devarpana</span> <br>
-        <span> and I am a passionate </span> <br>
-        <span class="purple" id="element"></span>
-        <div>
-          <button class="cta-btn">
-            <a href="./assets/DEVARPANA TRIBEDI.pdf" target="_blank">Download CV</a>
-          </button>
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero container" id="home">
+      <div class="hero-text">
+        <p class="eyebrow reveal"><span class="status-dot"></span> B.Sc. (Hons.) Data Science &amp; AI · IIT Guwahati</p>
+        <h1 class="hero-title reveal">
+          Hi, my name is <span class="gradient-text">Devarpana</span>
+          <span class="hero-sub">and I am a passionate</span>
+          <span class="typed-wrap"><span class="typed" id="typed" aria-live="polite"></span><span class="caret" aria-hidden="true"></span></span>
+        </h1>
+        <p class="hero-lead reveal">I build clean, responsive websites and full-stack web apps, and I train computer vision models that turn raw data into something people can see and use.</p>
+        <div class="hero-cta reveal">
+          <a class="btn btn-primary" href="./assets/Devarpana-Tribedi-CV.pdf" target="_blank" rel="noopener">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+          <a class="btn btn-ghost" href="#contact"><i class="fas fa-paper-plane"></i> Let's talk</a>
+        </div>
+        <div class="hero-social reveal" aria-label="Social links">
+          <a href="https://www.linkedin.com/in/devarpana-tribedi" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Devarpana" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/dev.tribedii?igsh=MTY3MXlyYWlqZmx5bA==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="http://t.me/T_devarpanaDSAI" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61554743802503" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         </div>
       </div>
 
+      <div class="hero-visual reveal" id="hero-visual" tabindex="0" aria-label="Illustration of Devarpana coding. Hover or tap for a message.">
+        <div class="avatar-tilt" id="avatar-tilt">
+          <div class="avatar-ring">
+            <img src="./images/image-1.webp" alt="Illustration of Devarpana coding on a laptop" width="726" height="785">
+            <span class="code-sparks" aria-hidden="true"><span>&lt;/&gt;</span><span>{ }</span><span>01</span><span>;</span></span>
+          </div>
+        </div>
+        <div class="floating-chip chip-1"><i class="fab fa-react"></i> React</div>
+        <div class="floating-chip chip-2"><i class="fab fa-python"></i> Python</div>
+        <div class="floating-chip chip-3"><i class="fas fa-eye"></i> YOLOv8</div>
+        <div class="message-bubble" role="status">👩‍💻 This girl is busy coding</div>
+      </div>
 
-      <div class="rightSection">
-        <div class="image-container">
-          <img src="./images/image-1.png" alt="female-developer">
-          <div class="message-bubble">👩‍💻 This girl is busy coding</div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+        <span class="mouse"><span class="wheel"></span></span>
+      </a>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section container" id="about">
+      <header class="section-head reveal">
+        <span class="section-kicker">01 · about</span>
+        <h2 class="section-title">Who.Am.I<span class="accent">?</span></h2>
+      </header>
+
+      <div class="about-grid">
+        <div class="panel reveal">
+          <h3 class="panel-title"><span class="mono">[ System.Identity() ]</span></h3>
+          <div class="info-grid">
+            <article class="info-card">
+              <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div>
+                <h4>Pursuing Intelligence</h4>
+                <p>Currently decoding the future: B.Sc. (Hons.) in Data Science &amp; AI at IIT Guwahati.</p>
+              </div>
+            </article>
+            <article class="info-card">
+              <div class="info-icon"><i class="fas fa-eye"></i></div>
+              <div>
+                <h4>Design Neural</h4>
+                <p>Crafted with aesthetics: my eyes align pixels and balance visual rhythm.</p>
+              </div>
+            </article>
+            <article class="info-card">
+              <div class="info-icon"><i class="fas fa-brain"></i></div>
+              <div>
+                <h4>Creative Synthesizer</h4>
+                <p>I blend logic and vision, where problem-solving meets creative sparks.</p>
+              </div>
+            </article>
+            <article class="info-card">
+              <div class="info-icon"><i class="fas fa-handshake"></i></div>
+              <div>
+                <h4>User Decoder</h4>
+                <p>I interpret client signals with precision, adapting fast and delivering faster.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="panel reveal">
+          <h3 class="panel-title"><span class="mono">[ System.Skills() ]</span></h3>
+
+          <div class="skill-tabs" role="tablist" aria-label="Skill categories">
+            <button class="skill-tab active" role="tab" aria-selected="true" data-filter="all">All</button>
+            <button class="skill-tab" role="tab" aria-selected="false" data-filter="web">Web</button>
+            <button class="skill-tab" role="tab" aria-selected="false" data-filter="db">Databases</button>
+            <button class="skill-tab" role="tab" aria-selected="false" data-filter="lang">Languages</button>
+            <button class="skill-tab" role="tab" aria-selected="false" data-filter="ds">Data Science</button>
+            <button class="skill-tab" role="tab" aria-selected="false" data-filter="ml">AI &amp; IoT</button>
+          </div>
+
+          <div class="skills-grid" id="skills-grid">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" class="skill" data-cat="web" target="_blank" rel="noopener"><i class="fab fa-html5"></i> HTML</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" class="skill" data-cat="web" target="_blank" rel="noopener"><i class="fab fa-css3-alt"></i> CSS</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="skill" data-cat="web" target="_blank" rel="noopener"><i class="fab fa-js"></i> JavaScript</a>
+            <a href="https://tailwindcss.com/docs" class="skill" data-cat="web" target="_blank" rel="noopener"><i class="fas fa-wind"></i> Tailwind CSS</a>
+            <a href="https://react.dev/" class="skill" data-cat="web" target="_blank" rel="noopener"><i class="fab fa-react"></i> React</a>
+            <a href="https://getbootstrap.com/docs/" class="skill" data-cat="web" target="_blank" rel="noopener"><i class="fab fa-bootstrap"></i> Bootstrap</a>
+            <a href="https://nodejs.org/en/docs" class="skill" data-cat="web" target="_blank" rel="noopener"><i class="fab fa-node-js"></i> Node.js</a>
+            <a href="https://expressjs.com/" class="skill" data-cat="web" target="_blank" rel="noopener"><i class="fas fa-server"></i> Express.js</a>
+            <a href="https://nextjs.org/docs" class="skill" data-cat="web" target="_blank" rel="noopener"><i class="fas fa-forward"></i> Next.js</a>
+            <a href="https://docs.djangoproject.com/" class="skill" data-cat="web" target="_blank" rel="noopener"><i class="fas fa-cubes-stacked"></i> Django</a>
+            <a href="https://dev.mysql.com/doc/" class="skill" data-cat="db" target="_blank" rel="noopener"><i class="fas fa-database"></i> MySQL</a>
+            <a href="https://www.mongodb.com/docs/" class="skill" data-cat="db" target="_blank" rel="noopener"><i class="fas fa-leaf"></i> MongoDB</a>
+            <a href="https://docs.python.org/3/" class="skill" data-cat="lang" target="_blank" rel="noopener"><i class="fab fa-python"></i> Python</a>
+            <a href="https://docs.oracle.com/en/java/" class="skill" data-cat="lang" target="_blank" rel="noopener"><i class="fab fa-java"></i> Java</a>
+            <a href="https://en.cppreference.com/w/c" class="skill" data-cat="lang" target="_blank" rel="noopener"><i class="fas fa-code"></i> C</a>
+            <a href="https://en.cppreference.com/w/cpp" class="skill" data-cat="lang" target="_blank" rel="noopener"><i class="fas fa-code"></i> C++</a>
+            <a href="https://cran.r-project.org/manuals.html" class="skill" data-cat="lang" target="_blank" rel="noopener"><i class="fas fa-chart-line"></i> R</a>
+            <a href="https://pandas.pydata.org/docs/" class="skill" data-cat="ds" target="_blank" rel="noopener"><i class="fas fa-table"></i> Pandas</a>
+            <a href="https://numpy.org/doc/" class="skill" data-cat="ds" target="_blank" rel="noopener"><i class="fas fa-cubes"></i> NumPy</a>
+            <a href="https://matplotlib.org/stable/" class="skill" data-cat="ds" target="_blank" rel="noopener"><i class="fas fa-chart-bar"></i> Matplotlib</a>
+            <a href="https://en.wikipedia.org/wiki/Computer_vision" class="skill" data-cat="ml" target="_blank" rel="noopener"><i class="fas fa-eye"></i> Computer Vision</a>
+            <a href="https://docs.ultralytics.com/" class="skill" data-cat="ml" target="_blank" rel="noopener"><i class="fas fa-crosshairs"></i> YOLOv8</a>
+            <a href="https://roboflow.com/" class="skill" data-cat="ml" target="_blank" rel="noopener"><i class="fas fa-tags"></i> Data Annotation (Roboflow)</a>
+            <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/" class="skill" data-cat="ml" target="_blank" rel="noopener"><i class="fas fa-microchip"></i> ESP32 &amp; IoT</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat"><span class="stat-num" data-count-of=".skill">0</span><span class="stat-label">skills &amp; tools</span></div>
+            <div class="stat"><span class="stat-num" data-count-of=".project-card[data-live]">0</span><span class="stat-label">live projects</span></div>
+            <div class="stat"><span class="stat-num" data-count="9">0</span><span class="stat-label">months interning</span></div>
+          </div>
         </div>
       </div>
     </section>
-  </main>
-  <!--------about-------->
-  <div class="arrow">
-    <div class="mouse_scroll">
 
-      <div class="mouse">
-        <div class="wheel"></div>
-      </div>
-      <div>
-        <span class="m_scroll_arrows unu"></span>
-        <span class="m_scroll_arrows doi"></span>
-        <span class="m_scroll_arrows trei"></span>
-      </div>
-  </div>
-  </div>
-  
-  <section class="about-section" id="about">
-    <div class="typewriter-wrapper">
-      <h2 class="typewriter-heading">~ Who.Am.I...? ~</h2>
-    </div>
-    
-    
-    <!-- LEFT SIDE -->
-    <div class="left-side">
-      <h2 class="section-heading">[ System.Identity() ]</h2>
-      <div class="info-grid">
-        <div class="info-box special">
-          <div class="icon"><i class="fas fa-graduation-cap"></i></div>
-          <div class="text">
-            <h3 class="section-title">Pursuing Intelligence</h3>
-            <p>Currently decoding the future—B.Sc.(Hons.) in Data Science & AI at IIT Guwahati.</p>
-          </div>
-        </div>
-        <div class="info-box special">
-          <div class="icon"><i class="fas fa-eye"></i></div>
-          <div class="text">
-            <h3 class="section-title">Design Neural</h3>
-            <p> Crafted with aesthetics—my eyes align pixels and balance visual rhythm.</p>
-          </div>
-        </div>
-        <div class="info-box special">
-          <div class="icon"><i class="fas fa-brain"></i></div>
-          <div class="text">
-            <h3>Creative Synthesizer</h3>
-            <p>I blend logic and vision—where problem-solving meets creative sparks.</p>
-          </div>
-        </div>
-        <div class="info-box special">
-          <div class="icon"><i class="fas fa-handshake"></i></div>
-          <div class="text">
-            <h3>User Decoder</h3>
-            <p>I interpret client signals with precision—adapting fast, delivering faster.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="section container" id="experience">
+      <header class="section-head reveal">
+        <span class="section-kicker">02 · experience</span>
+        <h2 class="section-title">Experience</h2>
+      </header>
 
-    <!-- RIGHT SIDE -->
-    <div class="right-side">
-      <h2 class="section-heading">[ System.Skills() ]</h2>
-    
-      <!-- Web Development -->
-      <div class="skill-category">
-        <h3 class="category-title">Web Development</h3>
-        <div class="skills-grid">
-          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" class="skill-box" target="_blank">
-            <i class="fab fa-html5 icon"></i> HTML
-          </a>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" class="skill-box" target="_blank">
-            <i class="fab fa-css3-alt icon"></i> CSS
-          </a>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="skill-box" target="_blank">
-            <i class="fab fa-js icon"></i> JavaScript
-          </a>
-          <a href="https://tailwindcss.com/docs" class="skill-box" target="_blank">
-            <i class="fas fa-wind icon"></i> Tailwind CSS
-          </a>
-          <a href="https://reactjs.org/docs/getting-started.html" class="skill-box" target="_blank">
-            <i class="fab fa-react icon"></i> React
-          </a>
-          <a href="https://getbootstrap.com/docs/" class="skill-box" target="_blank">
-            <i class="fab fa-bootstrap icon"></i> Bootstrap
-          </a>
-          <a href="https://nodejs.org/en/docs" class="skill-box" target="_blank">
-            <i class="fab fa-node icon"></i> Node.js
-          </a>
-          <a href="https://expressjs.com/" class="skill-box" target="_blank">
-            <i class="fas fa-server icon"></i> Express.js
-          </a>
-        </div>
+      <div class="timeline">
+        <article class="timeline-item panel reveal">
+          <div class="timeline-dot" aria-hidden="true"><i class="fas fa-rocket"></i></div>
+          <div class="timeline-head">
+            <div>
+              <h3>Co-founder</h3>
+              <p class="org">AquaFusion Technology · XYZ Layers</p>
+            </div>
+            <span class="date-pill"><i class="fas fa-circle live-dot"></i> Ongoing</span>
+          </div>
+          <div class="exp-project">
+            <p class="exp-lead">Co-founded AquaFusion Technology, the company behind <strong>XYZ Layers</strong>: a brand that designs and 3D-prints smart products and home décor layer by layer, made in India.</p>
+            <ul>
+              <li>Building the XYZ Layers online store, with a product shop, cart, accounts and a custom-order flow.</li>
+            </ul>
+            <ul class="tags"><li>Entrepreneurship</li><li>3D Printing</li><li>E-commerce</li><li>Web Development</li></ul>
+          </div>
+        </article>
+
+        <article class="timeline-item panel reveal">
+          <div class="timeline-dot" aria-hidden="true"><i class="fas fa-briefcase"></i></div>
+          <div class="timeline-head">
+            <div>
+              <h3>Technology Innovation Hub (TIH), IIT Guwahati</h3>
+              <p class="org">IITG-TIDF · two internships</p>
+            </div>
+            <span class="date-pill"><i class="fa-regular fa-calendar"></i> Nov 2025 – Jul 2026 · 9 months</span>
+          </div>
+
+          <div class="exp-projects">
+            <div class="exp-project">
+              <span class="exp-label">Internship 1 · Computer Vision Intern</span>
+              <h4><i class="fas fa-door-closed"></i> Railway Door Lock Detection System</h4>
+              <ul>
+                <li>Annotated about <strong>10,000 train images</strong> for door and door-lock detection using Roboflow.</li>
+                <li>Filtered the dataset by hand, removing noisy images and keeping only samples with clearly visible train doors.</li>
+                <li>Built a multi-user web application with Django, React and Python to present railway data from the server.</li>
+              </ul>
+              <div class="pipeline" aria-label="Data pipeline for the door lock detection system">
+                <div class="step"><i class="fas fa-images"></i><b>Collect</b><span>Train door images</span></div>
+                <div class="step"><i class="fas fa-filter"></i><b>Filter</b><span>Manual quality control</span></div>
+                <div class="step"><i class="fas fa-tags"></i><b>Annotate</b><span>~10,000 images in Roboflow</span></div>
+                <div class="step"><i class="fas fa-crosshairs"></i><b>Detect</b><span>Doors &amp; door locks</span></div>
+                <div class="step"><i class="fas fa-display"></i><b>Present</b><span>Django + React app</span></div>
+              </div>
+              <ul class="tags"><li>Computer Vision</li><li>Roboflow</li><li>Django</li><li>React</li></ul>
+            </div>
+            <div class="exp-project">
+              <span class="exp-label">Internship 2 · Web Developer Intern</span>
+              <h4><i class="fas fa-train"></i> Railway Chain Pull Alarm System</h4>
+              <ul>
+                <li>Worked on an ESP32-based IoT system that detects chain-pull events in running trains and uploads them to a server.</li>
+                <li>Developed device-side code in C++ for ESP32, GPS/GSM and optocoupler components.</li>
+                <li>Handled the chain-pull event data end to end, from the device to MongoDB to the live web dashboard, across about <strong>60 coaches in 3 trains</strong>.</li>
+              </ul>
+              <div class="pipeline" aria-label="Data pipeline for the chain pull alarm system">
+                <div class="step"><i class="fas fa-hand"></i><b>Sense</b><span>Optocoupler detects a chain pull</span></div>
+                <div class="step"><i class="fas fa-microchip"></i><b>Tag</b><span>ESP32 + GPS add coach, time &amp; place</span></div>
+                <div class="step"><i class="fas fa-tower-cell"></i><b>Upload</b><span>GSM sends the event</span></div>
+                <div class="step"><i class="fas fa-database"></i><b>Store</b><span>Server saves it in MongoDB</span></div>
+                <div class="step"><i class="fas fa-chart-line"></i><b>Show</b><span>Live alerts on Rail Watch</span></div>
+              </div>
+              <ul class="tags"><li>ESP32</li><li>C++</li><li>GPS/GSM</li><li>MongoDB</li><li>Data Pipeline</li></ul>
+              <a class="link-arrow" href="https://www.tihnfr.com/" target="_blank" rel="noopener">See the live dashboard <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item panel reveal">
+          <div class="timeline-dot" aria-hidden="true"><i class="fas fa-graduation-cap"></i></div>
+          <div class="timeline-head">
+            <div>
+              <h3>B.Sc. (Hons.) Data Science &amp; Artificial Intelligence</h3>
+              <p class="org">Indian Institute of Technology Guwahati</p>
+            </div>
+            <span class="date-pill"><i class="fa-regular fa-calendar"></i> 2023 – 2027</span>
+          </div>
+          <p class="muted">Coursework in machine learning, deep learning, computer vision, data mining, data visualization, DSA, RDBMS and cloud computing.</p>
+        </article>
+
+        <article class="timeline-item panel reveal">
+          <div class="timeline-dot" aria-hidden="true"><i class="fas fa-award"></i></div>
+          <div class="timeline-head">
+            <div>
+              <h3>Certifications</h3>
+            </div>
+          </div>
+          <ul class="cert-list">
+            <li><i class="fas fa-certificate"></i> Computer Vision Internship Certificate · TIH-IITG / IITG-TIDF</li>
+            <li><i class="fas fa-certificate"></i> Web Developer Internship Certificate · TIH-IITG / IITG-TIDF</li>
+            <li><i class="fas fa-certificate"></i> Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</li>
+            <li><i class="fas fa-certificate"></i> Oracle Data Platform 2025 Certified Foundations Associate</li>
+            <li><i class="fas fa-certificate"></i> Generative AI Mastermind · Outskill</li>
+          </ul>
+        </article>
       </div>
-    
-      <!-- Databases -->
-      <div class="skill-category">
-        <h3 class="category-title">Databases</h3>
-        <div class="skills-grid">
-          <a href="https://dev.mysql.com/doc/" class="skill-box" target="_blank">
-            <i class="fas fa-database icon"></i> MySQL
-          </a>
-          <a href="https://www.mongodb.com/docs/" class="skill-box" target="_blank">
-            <i class="fas fa-leaf icon"></i> MongoDB
-          </a>
-        </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section class="section container" id="services">
+      <header class="section-head reveal">
+        <span class="section-kicker">03 · services</span>
+        <h2 class="section-title">Services I Offer</h2>
+      </header>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-code"></i></div>
+          <h3>Web Design</h3>
+          <p>I craft clean, responsive websites using HTML, CSS, JavaScript, and modern frameworks tailored to user needs.</p>
+          <a href="https://en.wikipedia.org/wiki/Web_design" target="_blank" rel="noopener" class="link-arrow">Learn more <i class="fas fa-arrow-right"></i></a>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-server"></i></div>
+          <h3>MERN Stack Development</h3>
+          <p>From frontend to backend, I build scalable web apps using MongoDB, Express, React.js, and Node.js.</p>
+          <a href="https://www.geeksforgeeks.org/mern-stack/" target="_blank" rel="noopener" class="link-arrow">Learn more <i class="fas fa-arrow-right"></i></a>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-database"></i></div>
+          <h3>Data Science &amp; Machine Learning</h3>
+          <p>Data cleaning, analysis and visualization with Python, Pandas, NumPy &amp; Matplotlib, and machine learning models from classic ML to computer vision with YOLOv8.</p>
+          <a href="https://en.wikipedia.org/wiki/Data_science" target="_blank" rel="noopener" class="link-arrow">Learn more <i class="fas fa-arrow-right"></i></a>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+          <h3>Graphic Design</h3>
+          <p>Creating logos, social media graphics, posters, and digital assets for brand visibility and visual impact.</p>
+          <a href="https://en.wikipedia.org/wiki/Graphic_design" target="_blank" rel="noopener" class="link-arrow">Learn more <i class="fas fa-arrow-right"></i></a>
+        </article>
       </div>
-    
-      <!-- Programming Languages -->
-      <div class="skill-category">
-        <h3 class="category-title">Programming Languages</h3>
-        <div class="skills-grid">
-          <a href="https://docs.python.org/3/" class="skill-box" target="_blank">
-            <i class="fab fa-python icon"></i> Python
-          </a>
-          <a href="https://docs.oracle.com/en/java/" class="skill-box" target="_blank">
-            <i class="fab fa-java icon"></i> Java
-          </a>
-          <a href="https://en.cppreference.com/w/c" class="skill-box" target="_blank">
-            <i class="fas fa-code icon"></i> C
-          </a>
-          <a href="https://cran.r-project.org/manuals.html" class="skill-box" target="_blank">
-            <i class="fas fa-chart-line icon"></i> R
-          </a>
-        </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section container" id="projects">
+      <header class="section-head reveal">
+        <span class="section-kicker">04 · work</span>
+        <h2 class="section-title">My Work</h2>
+      </header>
+
+      <div class="project-filters reveal" role="tablist" aria-label="Filter projects">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="website">Websites</button>
+        <button class="filter-btn" data-filter="ml">AI &amp; IoT</button>
+        <button class="filter-btn" data-filter="game">Games</button>
       </div>
-    
-      <!-- Data Science Libraries -->
-      <div class="skill-category">
-        <h3 class="category-title">Data Science Libraries</h3>
-        <div class="skills-grid">
-          <a href="https://pandas.pydata.org/docs/" class="skill-box" target="_blank">
-            <i class="fas fa-table icon"></i> Pandas
-          </a>
-          <a href="https://numpy.org/doc/" class="skill-box" target="_blank">
-            <i class="fas fa-equals icon"></i> NumPy
-          </a>
-          <a href="https://matplotlib.org/stable/contents.html" class="skill-box" target="_blank">
-            <i class="fas fa-chart-bar icon"></i> Matplotlib
-          </a>
-        </div>
-      </div>
-    </div>
-    
-  </section>
- <section id="services">
-  <div class="container">
-    <div class="typewriter-wrapper">
-      <h2 class="typewriter-heading">~ Services I Offer ~</h2>
-    </div>
-    <div class="services-list">
-      <div>
-        <i class="fas fa-code icon-white"></i> <!-- coding symbol -->
-        <h3>Web Design</h3>
-        <p>I craft clean, responsive websites using HTML, CSS,
-          JavaScript, and modern frameworks tailored to user needs.</p>
-        <a href="https://en.wikipedia.org/wiki/Web_design" target="_blank">Learn more</a>
-      </div>
-      <div>
-        <i class="fas fa-server icon-white"></i> <!-- backend/server -->
-        <h3>MERN Stack Development</h3>
-        <p>From frontend to backend, I build scalable
-        web apps using MongoDB, Express, React.js, and Node.js.</p>
-        <a href="https://www.geeksforgeeks.org/mern-stack/" target="_blank">Learn more</a>
-      </div>
-      <div>
-        <i class="fas fa-database icon-white"></i> <!-- database symbol -->
-        <h3>Data Science Projects</h3>
-        <p>Data cleaning, analysis, and visualization with Python, Pandas, 
-          NumPy & Matplotlib. Ready for real-world challenges.</p>
-        <a href="https://en.wikipedia.org/wiki/Data_science" target="_blank">Learn more</a>
-      </div>
-      <div>
-        <i class="fas fa-paint-brush icon-white"></i>
-        <h3>Graphic Design</h3>
-        <p>Creating logos, social media graphics, posters, 
-          and digital assets for brand visibility and visual impact.</p>
-        <a href="https://www.geeksforgeeks.org/what-is-graphic-design/" target="_blank">Learn more</a>
-      </div>
-    </div>
-  </div>
- </section>
- <!-------------------Projects----------->
-<!-- Projects Section -->
-<section id="projects">
-  <div class="container">
-    <div class="typewriter-wrapper">
-      <h2 class="typewriter-heading">~ My Work ~</h2>
-    </div>
-    <div class="work-list">
-    <!-------- Work 1 ------------>
-  <!-- Work 1 -->
-    <div class="work">
-      <div class="laptop-frame">
-        <img src="./images/laptop.png" alt="Laptop Frame" class="laptop-image">
-        <div class="screen">
-          <img src="./images/Work-1.png" alt="Hotel Website Screenshot" class="project-screenshot">
-          <div class="project-info">
+
+      <div class="projects-grid">
+        <article class="project-card reveal" data-cat="website" data-live>
+          <div class="browser">
+            <div class="browser-bar"><span></span><span></span><span></span><em>takeupedu.in</em></div>
+            <img src="./images/project-takeup.webp" alt="Screenshot of the Take Up Education Solutions website" loading="lazy" width="1200" height="600">
+          </div>
+          <div class="project-body">
+            <span class="status live"><i class="fas fa-circle"></i> Live</span>
+            <h3>Take Up Education Solutions</h3>
+            <p>A production study-abroad consulting website with program browsing, university filters and contact forms, tuned to feel fast and consistent on desktop and mobile.</p>
+            <ul class="tags"><li>React</li><li>Next.js</li><li>Tailwind CSS</li><li>V0</li></ul>
+            <a class="btn btn-small" href="https://www.takeupedu.in/" target="_blank" rel="noopener">Visit site <i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-cat="website ml" data-live>
+          <div class="browser">
+            <div class="browser-bar"><span></span><span></span><span></span><em>tihnfr.com</em></div>
+            <img src="./images/project-railwatch.webp" alt="Screenshot of the Rail Watch chain-pull monitoring dashboard" loading="lazy" width="1200" height="600">
+          </div>
+          <div class="project-body">
+            <span class="status live"><i class="fas fa-circle"></i> Live · Internship project</span>
+            <h3>Rail Watch: Chain Pull Alarm</h3>
+            <p>Live dashboard for the ESP32-based IoT system I worked on at TIH-IITG. It detects chain-pull events in running trains and reports them to a server, across about 60 coaches in 3 trains.</p>
+            <ul class="tags"><li>ESP32</li><li>C++</li><li>IoT</li><li>MongoDB</li></ul>
+            <a class="btn btn-small" href="https://www.tihnfr.com/" target="_blank" rel="noopener">Visit site <i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-cat="ml">
+          <div class="browser">
+            <div class="browser-bar"><span></span><span></span><span></span><em>safety-monitor</em></div>
+            <img src="./images/project-safety-monitor.webp" alt="Cover image for the Safety Monitor PPE detection project" loading="lazy" width="1000" height="500">
+          </div>
+          <div class="project-body">
+            <span class="status ml"><i class="fas fa-brain"></i> Machine learning</span>
+            <h3>Safety Monitor: Helmet &amp; PPE Detection</h3>
+            <p>A fine-tuned YOLOv8 model trained on about 7,000 Roboflow images that finds people, helmets and PPE in images and draws bounding boxes around each one.</p>
+            <ul class="tags"><li>Python</li><li>YOLOv8</li><li>Computer Vision</li><li>Roboflow</li></ul>
+            <span class="btn btn-small is-disabled" aria-disabled="true">Demo link coming soon</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-cat="website">
+          <div class="browser">
+            <div class="browser-bar"><span></span><span></span><span></span><em>xyzlayers</em></div>
+            <img src="./images/project-xyzlayers.webp" alt="Screenshot of the XYZ Layers shopping website" loading="lazy" width="1200" height="600">
+          </div>
+          <div class="project-body">
+            <span class="status wip"><i class="fas fa-hammer"></i> In progress</span>
+            <h3>XYZ Layers Shopping Website</h3>
+            <p>The online store for XYZ Layers, the 3D-printing brand I co-founded under AquaFusion Technology. Shop smart home décor or order custom prints, all designed and printed in India.</p>
+            <ul class="tags"><li>E-commerce</li><li>3D Printing</li><li>Web App</li></ul>
+            <span class="btn btn-small is-disabled" aria-disabled="true">Launching soon</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-cat="website" data-live>
+          <div class="browser">
+            <div class="browser-bar"><span></span><span></span><span></span></div>
+            <img src="./images/Work-1.webp" alt="Screenshot of the Hotel Website" loading="lazy" width="500" height="220">
+          </div>
+          <div class="project-body">
             <h3>Hotel Website</h3>
-            <button>Know More</button>
             <p>A modern hotel booking website built from scratch with elegant frontend and responsive backend.</p>
-            <a href="https://devarpana.github.io/my_hotel_repo/index.html" target="_blank">
-              <i class="fa-solid fa-up-right-from-square"></i> 
-            </a>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <a class="btn btn-small" href="https://devarpana.github.io/my_hotel_repo/index.html" target="_blank" rel="noopener">Live demo <i class="fa-solid fa-up-right-from-square"></i></a>
           </div>
-        </div>
-      </div>
-    </div>
-  <!-- Work 2 -->
-    <div class="work">
-      <div class="laptop-frame">
-        <img src="./images/laptop.png" alt="Laptop Frame" class="laptop-image">
-        <div class="screen">
-          <img src="./images/Work-2.png" alt="Simon Game Screenshot" class="project-screenshot">
-          <div class="project-info">
+        </article>
+
+        <article class="project-card reveal" data-cat="website" data-live>
+          <div class="browser">
+            <div class="browser-bar"><span></span><span></span><span></span></div>
+            <img src="./images/Work-2.webp" alt="Screenshot of the Farmer Entrepreneur Website" loading="lazy" width="500" height="238">
+          </div>
+          <div class="project-body">
             <h3>Farmer Entrepreneur Website</h3>
-            <button>Know More</button>
             <p>A dedicated platform to empower local farmers and entrepreneurs with information, resources, and connections. Designed for usability and scalability.</p>
-            <a href="https://devarpana.github.io/FarmerEntrepreneur/" target="_blank">
-              <i class="fa-solid fa-up-right-from-square"></i>
-            </a>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <a class="btn btn-small" href="https://devarpana.github.io/FarmerEntrepreneur/" target="_blank" rel="noopener">Live demo <i class="fa-solid fa-up-right-from-square"></i></a>
           </div>
-        </div>
-      </div>
-    </div>
-<!-- Work 3 -->
-    <div class="work">
-      <div class="laptop-frame">
-        <img src="./images/laptop.png" alt="Laptop Frame" class="laptop-image">
-        <div class="screen">
-          <img src="./images/Work-3.png" alt="Simon Game Screenshot" class="project-screenshot">
-          <div class="project-info">
+        </article>
+
+        <article class="project-card reveal" data-cat="game" data-live>
+          <div class="browser">
+            <div class="browser-bar"><span></span><span></span><span></span></div>
+            <img src="./images/Work-3.webp" alt="Screenshot of the Simon Game" loading="lazy" width="500" height="231">
+          </div>
+          <div class="project-body">
             <h3>Simon Game Site</h3>
-            <button>Know More</button>
             <p>A nostalgic memory game built with JavaScript, featuring sounds and dynamic interaction. Fun, interactive, and coded from scratch.</p>
-            <a href="https://devarpana.github.io/SimonGame/" target="_blank">
-              <i class="fa-solid fa-up-right-from-square"></i> 
-            </a>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <a class="btn btn-small" href="https://devarpana.github.io/SimonGame/" target="_blank" rel="noopener">Play it <i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+        </article>
+
+        <a class="project-card more-card reveal" data-cat="all" href="https://github.com/Devarpana?tab=repositories" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+          <h3>More on GitHub</h3>
+          <p>Browse the rest of my code and experiments.</p>
+          <span class="link-arrow">View repositories <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section container" id="contact">
+      <header class="section-head reveal">
+        <span class="section-kicker">05 · contact</span>
+        <h2 class="section-title">Contact Me</h2>
+      </header>
+
+      <div class="contact-grid">
+        <div class="contact-info panel reveal">
+          <div class="lottie-wrap" aria-hidden="true">
+            <dotlottie-wc class="lottie" src="https://lottie.host/c9a56d39-94f3-4396-8e8b-a95a06187895/T798CiULV9.lottie" autoplay loop></dotlottie-wc>
+            <div class="lottie-fallback"><i class="fas fa-envelope-open-text"></i><span></span><span></span><span></span></div>
+          </div>
+          <h3>Let's build something together</h3>
+          <p class="muted">Have a project, an internship, or just want to say hi? My inbox is open.</p>
+
+          <div class="email-row">
+            <a href="mailto:t.devarpana@op.iitg.ac.in"><i class="fa-solid fa-envelope"></i> t.devarpana@op.iitg.ac.in</a>
+            <button class="copy-btn" type="button" data-copy="t.devarpana@op.iitg.ac.in" aria-label="Copy email address"><i class="fa-regular fa-copy"></i></button>
+          </div>
+          <div class="email-row">
+            <a href="mailto:devarpanatribedi@gmail.com"><i class="fa-solid fa-envelope"></i> devarpanatribedi@gmail.com</a>
+            <button class="copy-btn" type="button" data-copy="devarpanatribedi@gmail.com" aria-label="Copy email address"><i class="fa-regular fa-copy"></i></button>
+          </div>
+
+          <div class="social-row">
+            <a href="https://www.facebook.com/profile.php?id=61554743802503" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/devarpana-tribedi" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/dev.tribedii?igsh=MTY3MXlyYWlqZmx5bA==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="http://t.me/T_devarpanaDSAI" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://github.com/Devarpana" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
           </div>
         </div>
+
+        <form class="contact-form panel reveal" name="contact" novalidate>
+          <div class="field">
+            <input type="text" id="f-name" name="Name" placeholder=" " required autocomplete="name">
+            <label for="f-name">Your name</label>
+          </div>
+          <div class="field">
+            <input type="email" id="f-email" name="email" placeholder=" " required autocomplete="email">
+            <label for="f-email">Your email</label>
+          </div>
+          <div class="field">
+            <textarea id="f-message" name="message" rows="6" placeholder=" " required maxlength="2000"></textarea>
+            <label for="f-message">Write your message</label>
+          </div>
+          <!-- Honeypot: hidden from people, bots fill it in -->
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn btn-primary btn-block">
+            <span class="btn-label"><i class="fas fa-paper-plane"></i> Send message</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+          <p id="msg" class="form-msg" role="status" aria-live="polite"></p>
+        </form>
       </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2025</span> Devarpana Tribedi. <i class="fa-solid fa-heart"></i> No, not copyright — copyleft! Feel free to get inspired, just don’t copy my bugs 😉</p>
+      <a href="#home" class="link-arrow">Back to top <i class="fas fa-arrow-up"></i></a>
     </div>
-  </div>
-</section>
- <!--------------contact-------------->
- <section class="contact" id="contact">
-  <div class="contact-container">
-    <div class="typewriter-wrapper">
-      <h2 class="typewriter-heading">~ Contact Me ~</h2>
-    </div>
-    <div class="row">
-      <div class="contact-left">
-        <iframe 
-        src="https://lottie.host/embed/c9a56d39-94f3-4396-8e8b-a95a06187895/T798CiULV9.lottie" 
-        allowFullScreen>
-      </iframe>
+  </footer>
 
-        <p><i class="fa-solid fa-envelope"></i>t.devarpana@op.iitg.ac.in</p>
-        <p><i class="fa-solid fa-envelope"></i>devarpanatribedi@gmail.com</p>
-        <div class="social-icon">
-          <a href="https://www.facebook.com/profile.php?id=61554743802503" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-          <a href="https://www.linkedin.com/in/devarpana-tribedi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.instagram.com/dev.tribedii?igsh=MTY3MXlyYWlqZmx5bA==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-          <a href="http://t.me/T_devarpanaDSAI" target="_blank"><i class="fab fa-telegram"></i></a>
-        </div>
-      </div>
-      <div class="contact-right">
-       <form name="submit-to-google-sheet">
-        <input type="text" name="Name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="6" placeholder="Write your message"></textarea>
-        <button type="submit" class="btn cta-btn">Submit</button>
-       </form>
-       <span id="msg"></span>
-      </div>
-    </div>
-  </div>
- </section>
-<section class="copyright">
-    <p>
-      &copy; 2025 Devarpana Tribedi.<i class="fa-solid fa-heart"></i> No, not copyright — copyleft! Feel free to get inspired, just don’t copy my bugs 😉
-    </p>
-</section> 
-<div class="floating-buttons">
-  <button id="theme-toggle" title="Toggle Theme">
-    <i class="fas fa-moon"></i>
-  </button>
+  <button id="scrollToTopBtn" class="to-top" type="button" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <button id="scrollToTopBtn" title="Go to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-</div>
-
-
-
- <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script src="./script.js"></script>
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbx4grexFqYsMPC_o_4v04VzBbpS34JmGq30fwthCA-cKufZB6QQKPpIfjizZDwW7DjZ/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-          msg.innerHTML= "Message sent successfully"
-          setTimeout(function(){
-            msg.innerHTML=""
-          }, 1000)
-          form.reset()
-      })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-wc@0.9.28/dist/dotlottie-wc.js"></script>
+  <script src="./script.js" defer></script>
 </body>
 </html>

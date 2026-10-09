@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page not found | Devarpana Tribedi</title>
+  <meta name="robots" content="noindex">
+  <script>
+    // On GitHub Pages the site lives under /portfolio/; on other hosts it is at the root
+    window.SITE_BASE = location.hostname.endsWith('github.io') ? '/portfolio/' : '/';
+    try {
+      if (localStorage.getItem('theme') === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&family=Space+Grotesk:wght@400;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #07030f; --text: #f4f1fa; --muted: #a9a2bd; --accent: #ff0095; }
+    [data-theme="light"] { --bg: #fdf6fb; --text: #1d0b24; --muted: #6b5874; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 40px 20px;
+      text-align: center;
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(500px circle at 15% 10%, rgba(255, 0, 149, 0.35), transparent 60%),
+        radial-gradient(500px circle at 85% 80%, rgba(139, 92, 246, 0.35), transparent 60%),
+        var(--bg);
+    }
+    .code { font-family: 'JetBrains Mono', monospace; color: var(--accent); }
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(4rem, 18vw, 9rem);
+      line-height: 1;
+      background: linear-gradient(120deg, #ff0095, #8b5cf6 60%, #22d3ee);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    p { color: var(--muted); margin: 16px 0 28px; }
+    a {
+      display: inline-block;
+      padding: 13px 26px;
+      border-radius: 999px;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      background: linear-gradient(120deg, #ff0095, #8b5cf6);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="code">Error: page.notFound()</p>
+    <h1>404</h1>
+    <p>This page wandered off. Let's get you back home.</p>
+    <a href="/" id="home-link">Back to portfolio</a>
+  </main>
+  <script>document.getElementById('home-link').href = window.SITE_BASE;</script>
+</body>
+</html>
